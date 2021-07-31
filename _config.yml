@@ -54,7 +54,7 @@ default_category: uncategorized
 category_map: # edit for Theme.shoka
   Java: java
   前端: web
-  随笔: course-1
+  随笔: essay
 tag_map:
 
 # Date / Time format
@@ -92,11 +92,11 @@ markdown:
     linkify: true # 将类似 URL 的文本自动转换为链接。
     typographer:
     quotes: "“”‘’"
-  plugins: # markdown-it插件设置
+  plugins: # markdown-it 插件设置
     - plugin:
         name: markdown-it-toc-and-anchor
         enable: true
-        options: # 文章目录以及锚点应用的class名称，shoka主题必须设置成这样
+        options: # 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样
           tocClassName: "toc"
           anchorClassName: "anchor"
     - plugin:
@@ -120,19 +120,16 @@ markdown:
 minify:
   html:
     enable: true
-    stamp: false
-    exclude:
+    exclude: # 排除 hexo-feed 用到的模板文件
       - "**/json.ejs"
       - "**/atom.ejs"
       - "**/rss.ejs"
   css:
     enable: true
-    stamp: false
     exclude:
       - "**/*.min.css"
   js:
     enable: true
-    stamp: false
     mangle:
       toplevel: true
     output:
